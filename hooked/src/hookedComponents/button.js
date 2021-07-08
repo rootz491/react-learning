@@ -14,10 +14,10 @@ const MyButton = props => {
         return () => {  //  triggers when component unmounts
             document.title = `Byee ${props.name}`;
         }
-    }, [count]);    //  pass the updaing state variable
+    }, [count, props]);    //  pass the updaing state variable
 
 
-    //  programatically click every time component renders
+    //  programatically click every time, after component renders
     useEffect(() => {
         if (ref) {  //  ref points to button
             console.log(ref.current);   //  ref.current points to HTML of referenced element.
@@ -26,7 +26,6 @@ const MyButton = props => {
         
         if (ref2)   //  ref2 points to h1 tag 
             ref2.current.style.color = "green"; //  changing the color of h1 tag to `green` before component renders.
-        
     }, []);
 
 

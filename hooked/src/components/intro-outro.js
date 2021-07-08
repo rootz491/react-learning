@@ -2,9 +2,9 @@ import React from "react";
 
 
 //	function as a component & named export
-export const Intro = props => {
+export const Intro = () => {
 	return (
-		<h1>{props.name} is learning react.</h1>
+		<h1>I'm learning react.</h1>
 	);
 }
 
